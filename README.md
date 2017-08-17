@@ -63,7 +63,7 @@
 
         //创建地址图片（公司logo）
 	var pt = new BMap.Point(116.417, 39.909);
-	var myIcon = new BMap.Icon ("http://lbsyun.baidu.com/jsdemo/img/fox.gif", new BMap.Size(300,157));
+	var myIcon = new BMap.Icon ("./img/fox.gif", new BMap.Size(300,157));
 	var marker2 = new BMap.Marker(pt,{icon:myIcon});  // 创建标注
 	map.addOverlay(marker2);              // 将标注添加到地图中
   
