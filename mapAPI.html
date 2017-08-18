@@ -20,25 +20,29 @@
 </body>
 </html>
 <script type="text/javascript">
-    // 百度地图API功能
     var map = new BMap.Map("allmap");
-    /**/
+    /*=============百度地图API功能======================*/
     var point = new BMap.Point(116.314429,40.042809);
-    //启用滚轮放大缩小，默认禁用
-    map.enableContinuousZoom();    //启用地图惯性拖拽，默认禁用);
+    /*========启用滚轮放大缩小==============*/
+    map.enableContinuousZoom();
     map.centerAndZoom(point, 15);
-    var marker = new BMap.Marker(point);  // 创建标注
-    map.addOverlay(marker);               // 将标注添加到地图中
-    marker.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画
 
-    map.enableScrollWheelZoom();   //启用滚轮放大缩小，默认禁用
-    map.enableContinuousZoom();    //启用地图惯性拖拽，默认禁用
-
-    //创建主机屋地址图标部分
+    /*=======创建主机屋地址图标部分==========*/
     var pt = new BMap.Point(116.314429,40.042809);
     var myIcon = new BMap.Icon ("./img/address4.png",new BMap.Size(180,280));
-    var marker2 = new BMap.Marker(pt,{icon:myIcon});  // 创建标注
-    //    marker2.setAnimation(BMAP_ANIMATION_BOUNCE)
-    map.addOverlay(marker2);              // 将标注添加到地图中
+    var marker2 = new BMap.Marker(pt,{icon:myIcon});
+    map.addOverlay(marker2);
+
+
+    /*=========创建跳动图标====================*/
+    var marker = new BMap.Marker(point);
+    map.addOverlay(marker);
+    marker.setAnimation(BMAP_ANIMATION_BOUNCE);
+
+    /*=====启用滚轮放大缩小=============*/
+    map.enableScrollWheelZoom();
+    map.enableContinuousZoom();
+
+
 
 </script>
